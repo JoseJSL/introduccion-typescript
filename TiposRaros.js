@@ -30,3 +30,15 @@ function imprimirId(id) {
 }
 imprimirId("la id");
 imprimirId(3.334445);
+var punto = { x: 10, y: 20 };
+console.log(punto.x + ", " + punto.y);
+function imprimirEtiqueta(etiqueta) {
+    console.log(etiqueta.label);
+}
+var miEt = { numero: 10, label: 'labelio' }; // <- Aunque se envie un objeto con diferentes atributos, se ignoran los que no son usados en la función
+imprimirEtiqueta(miEt);
+//Literales
+function estadoCivil(estado) {
+    console.log(estado);
+}
+estadoCivil('soltero');

@@ -37,3 +37,42 @@ function imprimirId(id: number | string){
 
 imprimirId("la id");
 imprimirId(3.334445);
+
+//Aliases 
+type Punto = {
+    x: number;
+    y: number;
+}
+let punto: Punto = {x: 10, y: 20};
+console.log(punto.x + ", " + punto.y);
+
+//Interfaces
+interface Etiqueta{
+    label: string;
+}
+
+function imprimirEtiqueta(etiqueta: {label: string}){
+    console.log(etiqueta.label);
+}
+
+let miEt = {numero: 10, label: 'labelio'}; // <- Aunque se envie un objeto con diferentes atributos, se ignoran los que no son usados en la función
+imprimirEtiqueta(miEt);
+
+//Interfaz con atributos opcionales
+interface Cuadrado{
+    color?: string; //<- Se declara el atributo con un símbolo ? al final del nombre
+    ancho: number;
+}
+
+//Interfaz con atributos de solo lectura
+interface Puntos{
+    readonly x: number; //<- Palabra 'readonly' antes del nombre del atributo
+    y: number;
+}
+
+//Literales
+function estadoCivil(estado: 'soltero' | 'casado'){ // <- Se restringe el parametro a solo dos valores posibles
+    console.log(estado);
+}
+
+estadoCivil('soltero');
