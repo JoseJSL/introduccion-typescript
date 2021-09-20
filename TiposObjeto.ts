@@ -106,6 +106,8 @@ type Auto = [string, number];
 
 const prius: Auto = ["Toyota", 2015];
 const civic: Auto = ["Honda", 2016];
-//Tuplas rest
-type StringNumeroBoleanos = [string, number, ...boolean[]];
+
+type StringNumeroBoleanos = [string, number, ...boolean[]]; //<- Tupla rest
 const a: StringNumeroBoleanos = ["a", 1, true, true, false, false];
+
+type Auto2 = readonly[string, number];  //<- Tupla solo lectura
